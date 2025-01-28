@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Dashboard</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="bankname">
+                <h1 id="typing-text">Royal Mint</h1>
+            </div>
+            <nav>
+                <ul>
+                    <logo></logo>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Accounts</a></li>
+                    <li><a href="#">Loans</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href='/logout/' action="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id="typing-text"></h1>
+        <main class="dashboard-content">
+            <div class="top-row">
+                <section class="account-summary">
+                    <h2>Account Summary</h2>
+                    <div class="account-overview">
+                        <div class="temp">
+                            <h3>Account Number</h3>
+                            <p>{{ account_number }}</p>
+                        </div>
+                        <div class="temp">
+                            <h3>Total Balance</h3>
+                            <p>${{ balance }}</p>
+                        </div>
+                        <div class="temp">
+                            <h3>Current loan</h3>
+                            <p>${{ balance }}</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="account-card">
+                    <h2>Your Card</h2>
+                    <div class="card">
+                        <div class="card__info">
+                            <div class="card__logo">MasterCard</div>
+                            <div class="card__chip">
+                                <svg class="card__chip-lines" role="img" width="40px" height="40px" viewBox="0 0 100 100" aria-label="Chip">
+                                    <g opacity="0.8">
+                                        <polyline points="0,50 35,50" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="0,20 20,20 35,35" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="50,0 50,35" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="65,35 80,20 100,20" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="100,50 65,50" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="35,35 65,35 65,65 35,65 35,35" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="0,80 20,80 35,65" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="50,100 50,65" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                        <polyline points="65,65 80,80 100,80" fill="none" stroke="#000" stroke-width="2"></polyline>
+                                    </g>
+                                </svg>
+                                <div class="card__chip-texture"></div>
+                            </div>
+                            <div class="card__type">debit</div>
+                            <div class="card__number">
+                                <span class="card__digit-group">{{ account_number }}</span>
+                            </div>
+                            <div class="card__valid-thru" aria-label="Valid thru">Valid<br>thru</div>
+                            <div class="card__exp-date"><time datetime="2038-01">01/38</time></div>
+                            <div class="card__name" aria-label="Dee Stroyer">{{ username }}</div>
+                            <div class="card__vendor" role="img" aria-labelledby="card-vendor">
+                                <span id="card-vendor" class="card__vendor-sr">Mastercard</span>
+                            </div>
+                        <div class="card__texture"></div>
+                                </div>
+                                    </div>
+                </section>
+            </div>
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions">
+                    <button class="action-button" action="trans" >Transfer Money</button>
+                    <button class="action-button">Lend Money</button>
+                    <button class="action-button">Requests</button>
+                    <button class="action-button">Pay Bills</button>
+                    <button class="action-button">View Credit Score</button>
+                </div>
+            </section>
+
+            <section class="transactions-section">
+                <h2>Recent Transactions</h2>
+                <ul class="transaction-list">
+                    <li>Grocery - $500.00 <span>Dec 18, 2024</span></li>
+                    <li>Electricity Bill - $150.00 <span>Dec 17, 2024</span></li>
+                    <li>Online Shopping - $300.00 <span>Dec 15, 2024</span></li>
+                </ul>
+            </section>
+        </main>
+        <scrpit>
+            const text = "Welcome {{ username }}";
+            const speed = 100;
+            let index = 0;
+
+            function typeText(){
+                if(index < text.length)
+                {
+                    documnet.getElementById("typing-text").textContent += text.charAt(index);
+                    setTimeout(typeText, speed);
+                }
+            }
+            window.onload = typeText;
+        </scrpit>
+        <footer class="dashboard-footer">
+            <p>&copy; 2024 MyBank. All Rights Reserved.</p>
+        </footer>
+        <scrpit>
+            const text = "Welcome {{ username }}";
+            const speed = 100;
+            let index = 0;
+
+            function typeText(){
+                if(index < text.length)
+                {
+                    documnet.getElementById("typing-text").textContent += text.charAt(index);
+                    setTimeout(typeText, speed);
+                }
+            }
+            window.onload = typeText;
+        </scrpit>
+    </div>
+    <script>
+        const text = "Welcome {{ username }}";
+        const speed = 100;
+        let index = 0;
+
+        function typeText(){
+            if(index < text.length)
+            {
+                documnet.getElementById("typing-text").textContent += text.charAt(index);
+                setTimeout(typeText, speed);
+            }
+        }
+        window.onload = typeText;
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Dashboard</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <style>
+        /* Background styles */
+        body {
+            background-color: #111927;
+            background-image: 
+                radial-gradient(#003366) 
+                radial-gradient(#ffffff);
+        }
+        .card {
+            backdrop-filter: blur(21px) saturate(115%);
+            -webkit-backdrop-filter: blur(21px) saturate(115%);
+            background-color: rgba(17, 25, 40, 0.75);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+        }
+
+    </style>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Hey, {{ username }} do you need a loan. Don't worry we w'll provide you one</h1>
+            <!--<nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Accounts</a></li>
+                    <li><a href="#">Loans</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="/logout/">Logout</a></li>
+                </ul>
+            </nav>-->
+        </header>
+        <section id="Loans">
+            <div id="container">
+                <div id='card'>
+                    <h2>Educational Loan</h2>
+                </div>
+            </div>
+            <div class="cardContainer">
+                <div class="card">
+                </div>
+            </div>
+              
+        </section>
+
+        <footer class="dashboard-footer">
+            <p>&copy; 2024 MyBank. All Rights Reserved.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

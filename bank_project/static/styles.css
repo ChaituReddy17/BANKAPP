@@ -1,0 +1,228 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*form styles starts
+.container .login-box .h2{
+    color:#58bc82
+}
+.form {
+    --bg-light: #efefef;
+    --bg-dark: #707070;
+    --clr: #58bc82;
+    --clr-alpha: #9c9c9c60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .form .input-span {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form input[type="text"],
+  .form input[type="tel"],
+  .form input[type="email"],
+  .form input[type="password"] {
+    border-radius: 0.5rem;
+    padding: 1rem 0.75rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-alpha);
+    outline: 2px solid var(--bg-dark);
+  }
+  
+  .form input[type="text"]:focus,
+  .form input[type="tel"]:focus,
+  .form input[type="email"]:focus,
+  .form input[type="password"]:focus {
+    outline: 2px solid var(--clr);
+  }
+  
+  .label {
+    align-self: flex-start;
+    color: var(--clr);
+    font-weight: 600;
+  }
+  
+  .form .submit {
+    padding: 1rem 0.75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .form .submit:hover {
+    background-color: var(--clr);
+    color: var(--bg-dark);
+  }
+  
+  .span {
+    text-decoration: none;
+    color: var(--bg-dark);
+  }
+  
+  .span a {
+    color: var(--clr);
+  }
+form styles ends*/
+/* From Uiverse.io by AmIt-DasIT */ 
+/* From Uiverse.io by AmIt-DasIT */ 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+  }
+  
+  .form .form_front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 65px 45px;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }
+  .form .form_front .h2{
+    margin: 5px;
+  }
+  
+  .form .form_back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 15px 45px;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .form_details {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: white;
+
+
+  }
+  
+  .input {
+    width: 245px;
+    min-height: 45px;
+    color: #fff;
+    outline: none;
+    transition: 0.35s;
+    padding: 0px 7px;
+    background-color: #212121;
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6);
+  }
+  
+  .input::placeholder {
+    color: #999;
+  }
+  
+  .input:focus.input::placeholder {
+    transition: 0.3s;
+    opacity: 0;
+  }
+  
+  .input:focus {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .btn {
+    padding: 10px 35px;
+    cursor: pointer;
+    background-color: #212121;
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.35s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .btn:focus {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+  }
+  
+  .form .switch {
+    font-size: 13px;
+    color: white;
+  }
+  
+  .form .switch .signup_tog {
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .container #signup_toggle {
+    display: none;
+  }
+  
+  .container #signup_toggle:checked + .form {
+    transform: rotateY(-180deg);
+  }

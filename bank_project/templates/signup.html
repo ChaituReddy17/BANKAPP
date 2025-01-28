@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Signup</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!--<div class="container">
+        <div class="signup-box">
+            <h2 style="color:#58bc82">Welcome to ########</h2>
+            <p style="color:#9c9c9c60;">Enter your details to create an account</p>
+            <form class="form" action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+                <span class="input-span">
+                    <label for="username" class="label">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required />
+                </span>
+                <span class="input-span">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </span>
+                <span class="input-span">
+                    <label for="phone" class="label">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+                </span>
+                <span class="input-span">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create your Password" required />
+                </span>
+                <span class="input-span">
+                    <label for="confirm_password" class="label">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your Password" required />
+                </span>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>-->
+    <!--<div class="container">
+        <form class="form" method="POST" action="{% url 'signup' %}">
+            <h2 style="color:#58bc82">Welcome to ########</h2>
+            <p style="color:#9c9c9c60;">Enter your details to create an account</p>
+            {% csrf_token %}
+            <div class="form_back">
+                <div class="form_details">Sign Up</div>
+                <input type="text" class="input" name="username" placeholder="Enter your username" required />
+                <input type="email" class="input" name="email" placeholder="Enter your email" required />
+                <input type="tel" class="input" name="phone" placeholder="Enter your phone number" required />
+                <input type="password" class="input" name="password" placeholder="Create your Password" required />
+                <input type="password" class="input" name="confirm_password" placeholder="Confirm your Password" required />
+                <button type="submit" class="btn">Signup</button>
+                <span class="switch">Already have an account?
+                    <a href="{% url 'login' %}" class="signup_tog">Sign In</a>
+                </span>
+            </div>
+        </form>
+    </div>-->
+    <div class="container">
+        <form class="form" method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <!-- Signup Form -->
+            <div class="form_back">
+                <h2 style="color:#58bc82">Welcome to ########</h2>
+                <div class="form_details">Sign Up</div>
+                <input placeholder="Enter your username" class="input" type="text" name="username" required>
+                <input placeholder="Enter your email" class="input" type="text" name="email" required>
+                <input type="tel" class="input" name="phone" placeholder="Enter your phone number" required />
+                <input type="password" class="input" name="password" placeholder="Create your Password" required />
+                <input type="password" class="input" name="confirm_password" placeholder="Confirm your Password" required />
+                <button type="submit" class="btn">Signup</button>
+                <span class="switch">Already have an account?
+                    <a href="{% url 'login' %}" class="signup_tog">Sign In</a>
+                </span>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
